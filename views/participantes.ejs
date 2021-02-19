@@ -1,0 +1,30 @@
+<%- include('partials/head.ejs'); -%>
+
+<%- include('partials/header.ejs'); -%>
+
+<div class="container">
+		<h1>Participantes</h1>
+		<br>
+		<hr>
+
+		<% participantes.forEach(participante => { %>
+		<div class="card">
+			<div class="card-body">
+				<h2><%= participante.nome %> </h2>
+				<h4>Numero da sorte: <b><%= participante.nSorte %></b></h4>
+			</div>
+			<div class="card-footer">
+				
+				<a class="btn btn-danger" href="/deletarParticipante/<%= participante.nSorte %>/" >Apagar</a>
+			</div>			
+
+		</div>
+		<hr>
+
+		<% }); %>
+	</div>
+
+
+
+
+<%- include('partials/footer.ejs'); -%>

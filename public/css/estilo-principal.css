@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+body {
+  background: #F1F3FA;
+}
+
+h1{
+	padding: 15px;
+	text-align: center;
+
+}
+
+.navbar{
+  padding: 15px 10px;
+
+}
+
+.img-home{
+  padding-left: 20px;
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 25%;
+  min-width: 200px;
+  margin-left: 35%;
+}
+
+
+/******************Pagina de Sorteio*****************************/
+
+
+.btn-centro{
+  margin-top: 10%;
+  width: 50%;
+  margin-left: 23%;
+  line-height: 50px;
+  font-weight: 500;
+  font-size: 1.5em;
+
+}
+
+/* Profile container */
+.profile {
+  margin-top: 20px;
+  width: 40%;
+  margin-left: 20%;
+  display: none;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0;
+  margin-top: 3%;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
+}
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 60%;
+  max-height: 250px;
+  max-width: 250px;
+  -webkit-border-radius: 5% !important;
+  -moz-border-radius: 5% !important;
+  border-radius: 5% !important;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.9);
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.profile-usertitle-name {
+  color: #696969;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  font-size: 2em;
+}
+
+
+
+/***************************Loader**************************/
+
+
+.loader{
+  margin-top: 10%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 10em;
+  color: #0275d8;
+}

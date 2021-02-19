@@ -1,0 +1,35 @@
+<%- include('partials/head.ejs'); -%>
+
+<%- include('partials/header.ejs'); -%>
+
+
+<div class="container">
+		<h1>Cadastrar Participante</h1>
+		<hr>
+		<form method="post" enctype="multipart/form-data" action="cadastrarParticipante"> 
+			<label><h4>Nome</h4></label>
+			<input class="form-control" type="text" name="nome" placeholder="Informe o nome do participante" required>
+			<br>
+			<label><h4>Numero da Sorte</h4></label>
+			<div class="row">
+				<div class="col-md-2">
+					<input class="form-control" type="number" name="nSorte" required min="1" max="50">
+				</div>
+			</div>
+			<br>
+			<label><h4>Imagem</h4></label>
+			<h6 style="color: red; font-size: 0.9em">O nome da imagem deve ser igual ao numero da sorte do participante.jpg</h6>
+			<input class="form-control-file"  type="file" multiple accept ="image/*" name="foto" required>		
+			<br>		
+			<button class="form-control btn btn-success" type="submit" >Cadastrar</button>
+		</form>
+</div>
+
+
+
+
+
+<%- include('partials/footer.ejs'); -%>
+
+
+

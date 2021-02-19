@@ -1,0 +1,74 @@
+<%- include('partials/head.ejs'); -%>
+
+
+
+<%- include('partials/header.ejs'); -%>
+
+
+<div class="container">
+
+	<h1 class="loader" id="loader"></h1>
+	<h1 class="loader" id="loaderGanhador"><%= ganhador.nSorte %></h1>
+
+
+	<button type="button"  class="btn btn-success btn-centro" id="btn-ganhador" onclick="ganhador()" >Sortear</button>
+
+    <div class="row profile" id="profile">
+		<div class="col">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="/uploads/<%= ganhador.nSorte %>.jpg" class="img-responsive" >
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						Nome: <%= ganhador.nome %><br>
+						Numero da sorte: <%= ganhador.nSorte %>
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+
+
+<script>
+
+
+	function ganhador(){
+
+		let rep = 20;
+		let lg = 2;
+
+
+		document.getElementById('btn-ganhador').style.display = 'none';
+		document.getElementById('loader').style.display = 'flex';
+
+		var sorteio = setInterval(function(){
+
+			var n = Math.ceil(Math.random() * 50);
+			rep -= 1
+
+			document.getElementById('loader').innerHTML = n;
+			if(rep == 0){
+				clearInterval(sorteio)
+				document.getElementById('loader').style.display = 'none';
+
+				var loaderGanhador = setInterval(function(){
+					document.getElementById('loaderGanhador').style.display = 'flex';
+					lg -= 1;
+					if(lg == 0){
+						clearInterval(loaderGanhador)
+						document.getElementById('loaderGanhador').style.display = 'none';
+						document.getElementById('profile').style.display = 'inline';
+					}
+
+				},200)				
+			
+			}
+		},200)
+	}
+
+</script>
+
+
+<%- include('partials/footer.ejs'); -%>
